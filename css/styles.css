@@ -95,6 +95,35 @@ a {
 
 /* Header */
 
+.underline {
+  display: inline-block;
+}
+
+.underline::after,
+.site-nav-pages-link a::after {
+  content: '';
+  position: absolute;
+
+  height: 4px;
+  border-radius: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+}
+
+.site-nav-pages-link a::after {
+  transform: scaleX(0);
+  opacity: 0;
+
+  transition: opacity 250ms var(--cubic), transform 250ms var(--cubic);
+}
+
+.site-nav-pages-link a:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
 .header {
   font-weight: 500;
   font-size: 14px;
@@ -112,6 +141,7 @@ a {
 }
 
 .site-nav-pages-link .item a {
+  position: relative;
   display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
