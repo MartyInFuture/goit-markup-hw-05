@@ -53,6 +53,9 @@ a {
   line-height: 1.63;
 
   cursor: pointer;
+
+  transition: background-color 250ms var(--cubic), color 250ms var(--cubic),
+    box-shadow 250ms var(--cubic);
 }
 
 .button:hover,
@@ -140,6 +143,10 @@ a {
   display: flex;
 }
 
+.site-nav-pages-link a {
+  transition: color 250ms var(--cubic);
+}
+
 .site-nav-pages-link .item a {
   position: relative;
   display: inline-block;
@@ -149,6 +156,10 @@ a {
 
 .site-nav-pages-link .item:not(:last-child) {
   margin-right: 50px;
+}
+
+.site-nav-contacts a {
+  transition: color 25 0ms var(--cubic);
 }
 
 .site-nav-pages-link a:hover,
@@ -281,6 +292,33 @@ a {
   margin-right: 30px;
 }
 
+.what-we-do-list img {
+  display: block;
+}
+
+.what-we-do-list .item {
+  position: relative;
+}
+
+.what-we-do-list .text-wrapper {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 100%;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+}
+
+.what-we-do-list .text {
+  color: var(--main-background-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Adventages */
+
 .adventages-list .icon-container {
   display: flex;
   justify-content: center;
@@ -308,6 +346,8 @@ a {
   border-radius: 50%;
   width: 44px;
   height: 44px;
+
+  transition: background-color 250ms var(--cubic), color 250ms var(--cubic);
 }
 
 .social-list .social-list-item:not(:last-child) {
@@ -405,6 +445,8 @@ a {
   height: 92px;
   justify-content: center;
   align-items: center;
+
+  transition: color 250ms var(--cubic);
 }
 
 .clients-list .item:not(:last-child) {
@@ -455,6 +497,8 @@ a {
 .footer a {
   display: inline-block;
   color: rgba(255, 255, 255, 0.6);
+
+  transition: color 250ms var(--cubic);
 }
 
 .address a:hover,
@@ -532,12 +576,12 @@ a {
 
 .image-wrapper {
   position: relative;
-
   overflow: hidden;
 }
 
-.image-wrapper .text {
-  padding-top: 10%;
+.image-wrapper .text-wrapper {
+  display: flex;
+  align-items: center;
   padding-right: 24px;
   padding-left: 24px;
   position: absolute;
@@ -552,7 +596,11 @@ a {
   transition: transform 250ms var(--cubic);
 }
 
-.portfolio-works-list .item:hover .text {
+.portfolio-works-list .item {
+  transition: box-shadow 250ms var(--cubic);
+}
+
+.portfolio-works-list .item:hover .text-wrapper {
   transform: translateX(0);
 }
 
