@@ -234,6 +234,8 @@ a {
 }
 
 .hero .button {
+  padding: 10px 32px;
+
   color: inherit;
   background-color: var(--accent-color);
 
@@ -315,9 +317,11 @@ a {
 }
 
 .what-we-do-list .text {
-  color: var(--main-background-color);
+  font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
+
+  color: var(--main-background-color);
 }
 
 /* Adventages */
